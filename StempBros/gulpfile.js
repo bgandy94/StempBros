@@ -32,6 +32,13 @@ gulp.task('compile', function () {
       .pipe(gulp.dest("./app/"));
 });
 
+gulp.task("dev-compile", ["copy-nonjs", "compile"]);
+
+gulp.task('copy-nonjs', function () {
+    return gulp.src('./src/**/*.{html,css}')
+    .pipe(gulp.dest('./app/'));
+});
+
 gulp.task("watch", function () {
     gulp.watch(['./wwwroot/app/**/**.ts', './wwwroot/app/**/*.service.ts'], ["compile"]);
 });

@@ -1,6 +1,26 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    font-size: 25px;
+}
+
+
+/*Bootstrap override settings*/
+.navbar-inverse {
+    background: #0e7018; /* Old browsers */
+    background: -moz-linear-gradient(left, #0e7018 0%, #005206 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #0e7018 0%,#005206 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #0e7018 0%,#005206 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e7018', endColorstr='#005206',GradientType=1 ); /* IE6-9 */
+    
+}
+
+.navbar-nav > li > a:hover, .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: green !important;
+}
+
+.container{
+    width: 85%
 }
 
 /* Set padding to keep content from hitting the edges */
