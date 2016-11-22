@@ -9,19 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var home_routing_module_1 = require("./home-routing.module");
+var router_1 = require("@angular/router");
 var home_component_1 = require("./home.component");
-var HomeModule = (function () {
-    function HomeModule() {
+var HomeRoutingModule = (function () {
+    function HomeRoutingModule() {
     }
-    HomeModule = __decorate([
+    HomeRoutingModule = __decorate([
         core_1.NgModule({
-            imports: [home_routing_module_1.HomeRoutingModule],
-            declarations: [home_component_1.HomeComponent],
-            exports: [home_component_1.HomeComponent]
+            imports: [router_1.RouterModule.forChild([
+                    { path: '', component: home_component_1.HomeComponent }
+                ])],
+            exports: [router_1.RouterModule]
         }), 
         __metadata('design:paramtypes', [])
-    ], HomeModule);
-    return HomeModule;
+    ], HomeRoutingModule);
+    return HomeRoutingModule;
 }());
-exports.HomeModule = HomeModule;
+exports.HomeRoutingModule = HomeRoutingModule;

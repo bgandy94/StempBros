@@ -10,16 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var appRoutes = [
-    { path: 'home', loadChildren: "./app/home/home.module#HomeModule" },
-    { path: 'about', loadChildren: "./app/about/about.module#AboutModule" },
-];
+var routes = [];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
     }
     AppRoutingModule = __decorate([
         core_1.NgModule({
-            imports: [router_1.RouterModule.forRoot(appRoutes)],
+            imports: [router_1.RouterModule.forRoot(routes, { useHash: true })],
             exports: [router_1.RouterModule]
         }), 
         __metadata('design:paramtypes', [])

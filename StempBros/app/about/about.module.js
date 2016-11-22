@@ -9,12 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
+var about_routing_module_1 = require("./about-routing.module");
 var about_component_1 = require("./about.component");
 var AboutModule = (function () {
     function AboutModule() {
     }
     AboutModule = __decorate([
         core_1.NgModule({
+            imports: [about_routing_module_1.AboutRoutingModule],
             declarations: [about_component_1.AboutComponent],
             exports: [about_component_1.AboutComponent]
         }), 

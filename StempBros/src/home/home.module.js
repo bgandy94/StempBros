@@ -9,14 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
+var home_routing_module_1 = require("./home-routing.module");
 var home_component_1 = require("./home.component");
 var HomeModule = (function () {
     function HomeModule() {
     }
     HomeModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule],
+            imports: [home_routing_module_1.HomeRoutingModule],
             declarations: [home_component_1.HomeComponent],
             exports: [home_component_1.HomeComponent]
         }), 

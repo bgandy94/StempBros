@@ -10,10 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var routes = [
-    { path: 'about', loadChildren: "./app/about/about.module#AboutModule" },
-    { path: '', loadChildren: "./app/home/home.module#HomeModule" }
-];
+var routes = [];
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
     }

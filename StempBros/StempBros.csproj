@@ -212,11 +212,13 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="src\about\about-routing.module.ts" />
     <TypeScriptCompile Include="src\app-routing.module.ts" />
     <TypeScriptCompile Include="src\app.component.ts" />
     <TypeScriptCompile Include="src\app.module.ts" />
     <TypeScriptCompile Include="src\about\about.component.ts" />
     <TypeScriptCompile Include="src\about\about.module.ts" />
+    <TypeScriptCompile Include="src\home\home-routing.module.ts" />
     <TypeScriptCompile Include="src\home\home.component.ts" />
     <TypeScriptCompile Include="src\home\home.module.ts" />
     <TypeScriptCompile Include="src\main.ts" />

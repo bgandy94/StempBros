@@ -24,7 +24,8 @@ var AppModule = (function () {
             imports: [platform_browser_1.BrowserModule,
                 home_module_1.HomeModule,
                 about_module_1.AboutModule,
-                app_routing_module_1.AppRoutingModule],
+                app_routing_module_1.AppRoutingModule
+            ],
             declarations: [app_component_1.AppComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 
