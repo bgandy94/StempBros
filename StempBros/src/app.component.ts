@@ -3,4 +3,9 @@
     selector: "my-app",
     templateUrl: "./app/app.component.html"
 })
-export class AppComponent { }
+export class AppComponent {
+    closeNav() {
+        document.getElementsByClassName("collapse")
+    }
+
+}

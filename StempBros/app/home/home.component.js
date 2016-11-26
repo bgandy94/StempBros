@@ -8,14 +8,39 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var core_1 = require("@angular/core");
+var core_1 = require('@angular/core');
 var HomeComponent = (function () {
     function HomeComponent() {
     }
+    HomeComponent.prototype.ngOnInit = function () {
+    };
+    Object.defineProperty(HomeComponent.prototype, "routeAnimation", {
+        get: function () {
+            return true;
+        },
+        enumerable: true,
+        configurable: true
+    });
+    __decorate([
+        core_1.HostBinding("@flyInOut"), 
+        __metadata('design:type', Object)
+    ], HomeComponent.prototype, "routeAnimation", null);
     HomeComponent = __decorate([
         core_1.Component({
             selector: "home-page",
-            templateUrl: "./app/home/home.component.html"
+            templateUrl: "./app/home/home.component.html",
+            animations: [
+                core_1.trigger('flyInOut', [
+                    core_1.state('in', core_1.style({ transform: 'translateX(0)' })),
+                    core_1.transition('void => *', [
+                        core_1.style({ transform: 'translateX(-100%)' }),
+                        core_1.animate(100)
+                    ]),
+                    core_1.transition('* => void', [
+                        core_1.animate(100, core_1.style({ transform: 'translateX(100%)' }))
+                    ])
+                ])
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], HomeComponent);

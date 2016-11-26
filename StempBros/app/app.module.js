@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var forms_1 = require("@angular/forms");
 //Router Module
 var app_routing_module_1 = require("./app-routing.module");
 //Feature Modules
@@ -24,7 +25,8 @@ var AppModule = (function () {
             imports: [platform_browser_1.BrowserModule,
                 home_module_1.HomeModule,
                 about_module_1.AboutModule,
-                app_routing_module_1.AppRoutingModule
+                app_routing_module_1.AppRoutingModule,
+                forms_1.FormsModule
             ],
             declarations: [app_component_1.AppComponent],
             bootstrap: [app_component_1.AppComponent]

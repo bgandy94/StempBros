@@ -4,41 +4,100 @@
     font-size: 25px;
 }
 
+#home-page-img {
+    background-image: url('images/sp-homepic-bg.jpg');
+    background-repeat: no-repeat;
+    height: 325px;
+}
+
+
 
 /*Bootstrap override settings*/
-.navbar-inverse {
+.navbar-inverse, .btn-primary, footer {
     background: #0e7018; /* Old browsers */
     background: -moz-linear-gradient(left, #0e7018 0%, #005206 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(left, #0e7018 0%,#005206 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right, #0e7018 0%,#005206 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e7018', endColorstr='#005206',GradientType=1 ); /* IE6-9 */
-    
+}
+
+footer{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    color:white;
+}
+
+    .btn-primary:active, .btn-primary:hover {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#005206+0,0e7018+100 */
+        background: #005206; /* Old browsers */
+        background: -moz-linear-gradient(left, #005206 0%, #0e7018 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left, #005206 0%,#0e7018 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right, #005206 0%,#0e7018 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005206', endColorstr='#0e7018',GradientType=1 ); /* IE6-9 */
+    }
+
+.navbar-inverse, .navbar-collapse {
+    border-color: transparent !important;
+}
+
+.navbar-toggle{
+    margin-right: 25px;
+}
+.navbar-right {
+    padding-right: 75px;
+}
+
+.navbar-brand {
+    padding-left: 75px;
 }
 
 .navbar-nav > li > a:hover, .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
     background-color: green !important;
 }
 
-.container{
-    width: 85%
+.container {
+    width: 100%;
+    padding: 0;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
 .dl-horizontal dt {
     white-space: normal;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+.home-page-info {
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 45%;
+    font-size: 32px;
+    float: left;
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+}
+
+.home-page-img{
+    width:300px;
+    height:300px;
+    margin: 0 75px;
+}
+
+.center-margin{
+    margin: 0 auto;
+}
+
+.float-right{
+    float:right;
+}
+
+@media all and (min-width:1920px){
+    .home-page-img{
+    width:450px;
+    height:450px;
+    margin: 0 75px;
+    }
 }

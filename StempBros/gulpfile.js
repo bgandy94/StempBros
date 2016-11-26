@@ -40,7 +40,7 @@ gulp.task('copy-nonjs', function () {
 });
 
 gulp.task("watch", function () {
-    gulp.watch(['./wwwroot/app/**/**.ts', './wwwroot/app/**/*.service.ts'], ["compile"]);
+    gulp.watch(['./src/**/*.ts*', './src/**/*.html'], ["dev-compile"]);
 });
 
 gulp.task("clean-app", function () {
