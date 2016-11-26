@@ -179,6 +179,8 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="src\gallery\gallery.component.html" />
+    <Content Include="src\services\services.component.html" />
     <Content Include="src\app.component.html" />
     <Content Include="src\about\about.component.html" />
     <Content Include="src\home\home.component.html" />
@@ -214,6 +216,12 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="src\gallery\gallery-routing.module.ts" />
+    <TypeScriptCompile Include="src\gallery\gallery.component.ts" />
+    <TypeScriptCompile Include="src\gallery\gallery.module.ts" />
+    <TypeScriptCompile Include="src\services\services-routing.module.ts" />
+    <TypeScriptCompile Include="src\services\services.component.ts" />
+    <TypeScriptCompile Include="src\services\services.module.ts" />
     <TypeScriptCompile Include="src\about\about-routing.module.ts" />
     <TypeScriptCompile Include="src\app-routing.module.ts" />
     <TypeScriptCompile Include="src\app.component.ts" />

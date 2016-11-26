@@ -10,6 +10,8 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AboutModule } from "./about/about.module";
 import { HomeModule } from "./home/home.module";
 import { AppComponent }   from "./app.component";
+import { ServicesModule } from './services/services.module';
+import { GalleryModule } from "./gallery/gallery.module";
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { AppComponent }   from "./app.component";
         HomeModule,
         AboutModule,
         AppRoutingModule, 
-        FormsModule
+        FormsModule,
+        ServicesModule, 
+        GalleryModule
     ],
     declarations: [AppComponent],
     bootstrap: [AppComponent]

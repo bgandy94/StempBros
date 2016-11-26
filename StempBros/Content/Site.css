@@ -1,6 +1,6 @@
 ﻿body {
     padding-top: 50px;
-    padding-bottom: 20px;
+    min-height:100%;
     font-size: 25px;
 }
 
@@ -10,7 +10,9 @@
     height: 325px;
 }
 
-
+.green-text{
+    color: #0e7018;
+}
 
 /*Bootstrap override settings*/
 .navbar-inverse, .btn-primary, footer {
@@ -22,11 +24,9 @@
 }
 
 footer{
-    position:absolute;
-    bottom:0;
-    width:100%;
-    color:white;
+    height:75px;
 }
+
 
     .btn-primary:active, .btn-primary:hover {
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#005206+0,0e7018+100 */
@@ -56,6 +56,10 @@ footer{
     background-color: green !important;
 }
 
+.page-container{
+    width:80%;
+}
+
 .container {
     width: 100%;
     padding: 0;
@@ -75,8 +79,6 @@ footer{
 }
 
 .centered {
-    margin-left: auto;
-    margin-right: auto;
     padding-top: 15px;
 }
 
@@ -92,6 +94,10 @@ footer{
 
 .float-right{
     float:right;
+}
+
+.c-align-text{
+    text-align: center;
 }
 
 @media all and (min-width:1920px){

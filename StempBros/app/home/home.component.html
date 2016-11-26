@@ -15,17 +15,17 @@
                 <h2 style="text-align: center; margin: 0 0 5px 0; font-weight: 500;">Contact Us</h2>
                 <div style="width:100%">
                     <div class="form-group" style="float:left; width:49%">
-                        <input placeholder="Name" class="form-control" />
+                        <input [(ngModel)]="name" placeholder="Name" class="form-control" />
                     </div>
                     <div class="form-group" style="float:left; width:49%">
-                        <input placeholder="Number" style="margin-left: 10px;" class="form-control" />
+                        <input [(ngModel)]="number" placeholder="Number" style="margin-left: 10px;" class="form-control" />
                     </div>
                 </div>
                 <div class="form-group">
-                    <textarea placeholder="Question/Comment" class="form-control"></textarea>
+                    <textarea [(ngModel)]="question" placeholder="Question/Comment" class="form-control"></textarea>
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-primary float-right" type="submit">Submit</button>
+                    <button (click)="submitContact()" class="btn btn-primary float-right" type="submit">Submit</button>
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -34,7 +34,7 @@
 </div>
 
 <div class="center-margin" style="display: flex; justify-content: center; align-items: center">
-    <img class="home-page-img" src="../../Content/images/tree-services-img.png" />
-    <img class="home-page-img" src="../../Content/images/fencing-img.png" />
-    <img class="home-page-img" src="../../Content/images/tree-services-img.png" />
+    <a routerLink="/services"><img class="home-page-img" src="../../Content/images/tree-services-img.png" /></a>
+    <a routerLink="/services"><img class="home-page-img" src="../../Content/images/fencing-img.png" /></a>
+    <a routerLink="/services"><img class="home-page-img" src="../../Content/images/tree-services-img.png" /></a>
 </div>

@@ -1,0 +1,40 @@
+<div id="home-page-img">
+    <div style="width:100%" class="centered center-margin">
+        <div class="centered center-margin" style="width: 85%; display: flex; justify-content: center;
+             align-items: center;">
+            <div class="home-page-info">
+                <p>
+                    Stemper Brothers LLC is a tree company
+                    located in Oklahoma City, Oklahoma. We
+                    provide tree trimming, haul off, fencing,
+                    among other services. Contact us today
+                    to let help you!
+                </p>
+            </div>
+            <div class="home-page-info" style="margin-left: 50px; font-size: 17px">
+                <h2 style="text-align: center; margin: 0 0 5px 0; font-weight: 500;">Contact Us</h2>
+                <div style="width:100%">
+                    <div class="form-group" style="float:left; width:49%">
+                        <input [(ngModel)]="name" placeholder="Name" class="form-control" />
+                    </div>
+                    <div class="form-group" style="float:left; width:49%">
+                        <input [(ngModel)]="number" placeholder="Number" style="margin-left: 10px;" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea [(ngModel)]="question" placeholder="Question/Comment" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <button (click)="submitContact()" class="btn btn-primary float-right" type="submit">Submit</button>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+
+<div class="center-margin" style="display: flex; justify-content: center; align-items: center">
+    <img class="home-page-img" src="../../Content/images/tree-services-img.png" />
+    <img class="home-page-img" src="../../Content/images/fencing-img.png" />
+    <img class="home-page-img" src="../../Content/images/tree-services-img.png" />
+</div>

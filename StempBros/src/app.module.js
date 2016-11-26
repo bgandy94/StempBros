@@ -10,12 +10,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
+var forms_1 = require("@angular/forms");
 //Router Module
 var app_routing_module_1 = require("./app-routing.module");
 //Feature Modules
 var about_module_1 = require("./about/about.module");
 var home_module_1 = require("./home/home.module");
 var app_component_1 = require("./app.component");
+var services_module_1 = require('./services/services.module');
+var gallery_module_1 = require("./gallery/gallery.module");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -24,7 +27,10 @@ var AppModule = (function () {
             imports: [platform_browser_1.BrowserModule,
                 home_module_1.HomeModule,
                 about_module_1.AboutModule,
-                app_routing_module_1.AppRoutingModule
+                app_routing_module_1.AppRoutingModule,
+                forms_1.FormsModule,
+                services_module_1.ServicesModule,
+                gallery_module_1.GalleryModule
             ],
             declarations: [app_component_1.AppComponent],
             bootstrap: [app_component_1.AppComponent]

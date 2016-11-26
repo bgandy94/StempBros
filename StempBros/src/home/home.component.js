@@ -14,6 +14,15 @@ var HomeComponent = (function () {
     }
     HomeComponent.prototype.ngOnInit = function () {
     };
+    HomeComponent.prototype.submitContact = function () {
+        alert(this.name + this.number + this.question);
+        this.clear();
+    };
+    HomeComponent.prototype.clear = function () {
+        this.name = "";
+        this.number = "";
+        this.question = "";
+    };
     Object.defineProperty(HomeComponent.prototype, "routeAnimation", {
         get: function () {
             return true;
