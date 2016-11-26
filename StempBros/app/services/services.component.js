@@ -9,8 +9,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require("@angular/router");
+require('rxjs/add/operator/switchMap');
 var ServicesComponent = (function () {
-    function ServicesComponent() {
+    function ServicesComponent(_route, _router) {
+        this._route = _route;
+        this._router = _router;
     }
     Object.defineProperty(ServicesComponent.prototype, "routeAnimation", {
         get: function () {
@@ -20,6 +24,11 @@ var ServicesComponent = (function () {
         configurable: true
     });
     ServicesComponent.prototype.ngOnInit = function () {
+        var params = this._route.params;
+        if (params.value.link) {
+            var e = document.getElementById(params.value.link);
+            e.scrollIntoView(true);
+        }
     };
     __decorate([
         core_1.HostBinding("@flyInOut"), 
@@ -42,7 +51,7 @@ var ServicesComponent = (function () {
                 ])
             ]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router])
     ], ServicesComponent);
     return ServicesComponent;
 }());

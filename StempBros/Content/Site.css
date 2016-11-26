@@ -86,6 +86,7 @@ footer{
     width:300px;
     height:300px;
     margin: 0 75px;
+    cursor: pointer;
 }
 
 .center-margin{

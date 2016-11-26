@@ -2,6 +2,8 @@
     trigger, transition, animate,
     style, state } from '@angular/core';
 
+import { Router, Params } from "@angular/router";
+
 @Component({
     selector: "home-page",
     templateUrl: "./app/home/home.component.html",
@@ -19,6 +21,9 @@
     ]
 })
 export class HomeComponent implements OnInit {
+
+    constructor(private _router: Router) { }
+    
     ngOnInit() {
 
     }
@@ -28,8 +33,12 @@ export class HomeComponent implements OnInit {
     public question: string;
 
     submitContact() {
-        alert(this.name + this.number + this.question);
+        alert(" Name: " + this.name + "\r\n Number: " + this.number + "\r\n Question: " + this.question);
         this.clear();
+    }
+
+    goToTreeServices(link: string) {
+        this._router.navigate(["/services", {link: link}]);
     }
 
     clear() {

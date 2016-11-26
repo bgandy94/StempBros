@@ -9,14 +9,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require("@angular/router");
 var HomeComponent = (function () {
-    function HomeComponent() {
+    function HomeComponent(_router) {
+        this._router = _router;
     }
     HomeComponent.prototype.ngOnInit = function () {
     };
     HomeComponent.prototype.submitContact = function () {
         alert(this.name + this.number + this.question);
         this.clear();
+    };
+    HomeComponent.prototype.goToTreeServices = function () {
+        this._router.navigate(["/services", "test"]);
     };
     HomeComponent.prototype.clear = function () {
         this.name = "";
@@ -51,7 +56,7 @@ var HomeComponent = (function () {
                 ])
             ]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router])
     ], HomeComponent);
     return HomeComponent;
 }());
