@@ -24,11 +24,11 @@ var ServicesComponent = (function () {
         configurable: true
     });
     ServicesComponent.prototype.ngOnInit = function () {
-        var params = this._route.params;
-        if (params.value.link) {
-            var e = document.getElementById(params.value.link);
-            e.scrollIntoView(true);
-        }
+        //var params = this._route.params;
+        //if (params.value.link) {
+        //    var e = document.getElementById(params.value.link);
+        //    e.scrollIntoView(true);
+        //}
     };
     __decorate([
         core_1.HostBinding("@flyInOut"), 

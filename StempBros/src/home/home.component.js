@@ -17,11 +17,11 @@ var HomeComponent = (function () {
     HomeComponent.prototype.ngOnInit = function () {
     };
     HomeComponent.prototype.submitContact = function () {
-        alert(this.name + this.number + this.question);
+        alert(" Name: " + this.name + "\r\n Number: " + this.number + "\r\n Question: " + this.question);
         this.clear();
     };
-    HomeComponent.prototype.goToTreeServices = function () {
-        this._router.navigate(["/services", "test"]);
+    HomeComponent.prototype.goToTreeServices = function (link) {
+        this._router.navigate(["/services", { link: link }]);
     };
     HomeComponent.prototype.clear = function () {
         this.name = "";

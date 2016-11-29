@@ -29,11 +29,11 @@ export class ServicesComponent implements OnInit {
     }
 
     ngOnInit() {
-        var params = this._route.params;
-        if (params.value.link) {
-            var e = document.getElementById(params.value.link);
-            e.scrollIntoView(true);
-        }
+        //var params = this._route.params;
+        //if (params.value.link) {
+        //    var e = document.getElementById(params.value.link);
+        //    e.scrollIntoView(true);
+        //}
     }
 
 
