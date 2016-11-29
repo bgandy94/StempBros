@@ -10,11 +10,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var router_1 = require("@angular/router");
+var animations_1 = require("../shared/animations");
 var HomeComponent = (function () {
     function HomeComponent(_router) {
         this._router = _router;
     }
     HomeComponent.prototype.ngOnInit = function () {
+        window.scrollTo(0, 0);
     };
     HomeComponent.prototype.submitContact = function () {
         alert(" Name: " + this.name + "\r\n Number: " + this.number + "\r\n Question: " + this.question);
@@ -28,33 +30,15 @@ var HomeComponent = (function () {
         this.number = "";
         this.question = "";
     };
-    Object.defineProperty(HomeComponent.prototype, "routeAnimation", {
-        get: function () {
-            return true;
-        },
-        enumerable: true,
-        configurable: true
-    });
-    __decorate([
-        core_1.HostBinding("@flyInOut"), 
-        __metadata('design:type', Object)
-    ], HomeComponent.prototype, "routeAnimation", null);
     HomeComponent = __decorate([
         core_1.Component({
             selector: "home-page",
             templateUrl: "./app/home/home.component.html",
-            animations: [
-                core_1.trigger('flyInOut', [
-                    core_1.state('in', core_1.style({ transform: 'translateX(0)' })),
-                    core_1.transition('void => *', [
-                        core_1.style({ transform: 'translateX(-100%)' }),
-                        core_1.animate(100)
-                    ]),
-                    core_1.transition('* => void', [
-                        core_1.animate(100, core_1.style({ transform: 'translateX(100%)' }))
-                    ])
-                ])
-            ]
+            animations: [animations_1.routeAnimation],
+            host: {
+                '[@routeAnimation]': 'true',
+                '[style.display]': "'block'"
+            }
         }), 
         __metadata('design:paramtypes', [router_1.Router])
     ], HomeComponent);

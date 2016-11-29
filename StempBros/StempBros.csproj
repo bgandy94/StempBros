@@ -154,6 +154,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\images\fencing-img.png" />
     <Content Include="Content\images\sp-homepic-bg.jpg" />
+    <Content Include="Content\images\sprinklers-services-img.png" />
     <Content Include="Content\images\tree-services-img.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -216,6 +217,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="src\shared\animations.ts" />
     <TypeScriptCompile Include="src\gallery\gallery-routing.module.ts" />
     <TypeScriptCompile Include="src\gallery\gallery.component.ts" />
     <TypeScriptCompile Include="src\gallery\gallery.module.ts" />

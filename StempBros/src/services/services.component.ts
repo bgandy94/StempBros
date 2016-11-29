@@ -1,41 +1,34 @@
-﻿import { Component, OnInit, keyframes, HostBinding,
-    trigger, transition, animate,
-    style, state } from '@angular/core';
-import { ActivatedRoute, Router, Params } from"@angular/router";
-import 'rxjs/add/operator/switchMap';
+﻿import { Component, OnInit } from "@angular/core";
+import { ActivatedRoute, Router } from "@angular/router";
+
+
+import { routeAnimation } from "../shared/animations";
 
 @Component({
     selector: "services-page",
     templateUrl: "./app/services/services.component.html",
-    animations: [
-        trigger('flyInOut', [
-            state('in', style({ transform: 'translateX(0)' })),
-            transition('void => *', [
-                style({ transform: 'translateX(-100%)' }),
-                animate(100)
-            ]),
-            transition('* => void', [
-                animate(100, style({ transform: 'translateX(100%)' }))
-            ])
-        ])
-    ]
+    animations: [routeAnimation],
+    host: {
+        "[@routeAnimation]": "true",
+        "[style.display]"  : "'block'"
+    }
 })
 export class ServicesComponent implements OnInit {
-
+    link: string;
     constructor(private _route: ActivatedRoute, private _router: Router) { }
 
-    @HostBinding("@flyInOut") get routeAnimation() {
-        return true;
+
+    ngOnInit(): any {
+
+        window.scrollTo(0, 0);
+        this._route.params.subscribe(params => {
+            this.link = params["link"];
+        });
+        if (this.link) {
+            var e = document.getElementById(this.link);
+            if (e) {
+                e.scrollIntoView();
+            }
+        }
     }
-
-    ngOnInit() {
-        //var params = this._route.params;
-        //if (params.value.link) {
-        //    var e = document.getElementById(params.value.link);
-        //    e.scrollIntoView(true);
-        //}
-    }
-
-
-   
 }

@@ -1,31 +1,24 @@
-﻿import { Component, OnInit, HostBinding,
-    trigger, transition, animate,
-    style, state } from '@angular/core';
-
+﻿import { Component, OnInit } from '@angular/core';
 import { Router, Params } from "@angular/router";
+
+import { routeAnimation } from "../shared/animations";
+
 
 @Component({
     selector: "home-page",
     templateUrl: "./app/home/home.component.html",
-    animations: [
-        trigger('flyInOut', [
-            state('in', style({ transform: 'translateX(0)' })),
-            transition('void => *', [
-                style({ transform: 'translateX(-100%)' }),
-                animate(100)
-            ]),
-            transition('* => void', [
-                animate(100, style({ transform: 'translateX(100%)' }))
-            ])
-        ])
-    ]
+    animations: [ routeAnimation ],
+    host: {
+        '[@routeAnimation]': 'true',
+        '[style.display]': "'block'"
+    }
 })
 export class HomeComponent implements OnInit {
 
     constructor(private _router: Router) { }
     
     ngOnInit() {
-
+        window.scrollTo(0, 0);
     }
 
     public name: string;
@@ -45,10 +38,5 @@ export class HomeComponent implements OnInit {
         this.name = "";
         this.number = "";
         this.question = "";
-    }
-
-
-    @HostBinding("@flyInOut") get routeAnimation() {
-        return true;
     }
 }

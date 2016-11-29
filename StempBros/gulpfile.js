@@ -7,6 +7,7 @@ var gulp = require("gulp"),
     uglify = require("gulp-uglify"),
     ts = require("gulp-typescript"),
     tsconfig = require("./tsconfig"),
+    sourcemaps = require("gulp-sourcemaps"),
     del = require("del");
 
 
@@ -28,7 +29,9 @@ var paths = {
 gulp.task('compile', function () {
     return gulp
       .src(['./src/**/*.ts*'])
+      .pipe(sourcemaps.init())
       .pipe(ts(tsconfig.compilerOptions))
+      .pipe(sourcemaps.write())
       .pipe(gulp.dest("./app/"));
 });
 
