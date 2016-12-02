@@ -1,6 +1,6 @@
 ﻿body {
     padding-top: 50px;
-    min-height:100%;
+    min-height: 100%;
     font-size: 25px;
 }
 
@@ -10,12 +10,12 @@
     height: 325px;
 }
 
-.green-text{
+.green-text {
     color: #0e7018;
 }
 
 /*Bootstrap override settings*/
-.navbar-inverse, .btn-primary, footer {
+.navbar-inverse, .btn-primary, footer, .service-item {
     background: #0e7018; /* Old browsers */
     background: -moz-linear-gradient(left, #0e7018 0%, #005206 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(left, #0e7018 0%,#005206 100%); /* Chrome10-25,Safari5.1-6 */
@@ -23,27 +23,33 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0e7018', endColorstr='#005206',GradientType=1 ); /* IE6-9 */
 }
 
-footer{
-    height:75px;
+footer {
+    height: 75px;
+    margin-top: 25px;
 }
 
 
-    .btn-primary:active, .btn-primary:hover {
-        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#005206+0,0e7018+100 */
-        background: #005206; /* Old browsers */
-        background: -moz-linear-gradient(left, #005206 0%, #0e7018 100%); /* FF3.6-15 */
-        background: -webkit-linear-gradient(left, #005206 0%,#0e7018 100%); /* Chrome10-25,Safari5.1-6 */
-        background: linear-gradient(to right, #005206 0%,#0e7018 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005206', endColorstr='#0e7018',GradientType=1 ); /* IE6-9 */
-    }
+.btn-primary:active, .btn-primary:hover {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#005206+0,0e7018+100 */
+    background: #005206; /* Old browsers */
+    background: -moz-linear-gradient(left, #005206 0%, #0e7018 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #005206 0%,#0e7018 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #005206 0%,#0e7018 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005206', endColorstr='#0e7018',GradientType=1 ); /* IE6-9 */
+}
+
+.push-right{
+    margin-left:50px;
+}
 
 .navbar-inverse, .navbar-collapse {
     border-color: transparent !important;
 }
 
-.navbar-toggle{
+.navbar-toggle {
     margin-right: 25px;
 }
+
 .navbar-right {
     padding-right: 75px;
 }
@@ -56,9 +62,6 @@ footer{
     background-color: green !important;
 }
 
-.page-container{
-    width:80%;
-}
 
 .container {
     width: 100%;
@@ -73,38 +76,116 @@ footer{
     background-color: rgba(255, 255, 255, 0.75);
     width: 45%;
     font-size: 32px;
-    float: left;
+    height: 250px;
     padding: 15px;
     border-radius: 15px;
+}
+
+.home-page-info-container {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .centered {
     padding-top: 15px;
 }
 
-.home-page-img{
-    width:300px;
-    height:300px;
+.home-page-img {
+    width: 300px;
+    height: 300px;
     margin: 0 75px;
     cursor: pointer;
 }
 
-.center-margin{
+.center-margin {
     margin: 0 auto;
 }
 
-.float-right{
-    float:right;
+.float-right {
+    float: right;
 }
 
-.c-align-text{
+.c-align-text {
     text-align: center;
 }
 
-@media all and (min-width:1920px){
-    .home-page-img{
-    width:450px;
-    height:450px;
-    margin: 0 75px;
+.service-list {
+    list-style-type: disc;
+}
+
+.service-item {
+    color: white;
+    padding: 15px;
+}
+
+.box-shadow {
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+.service-item-sub {
+    background-color: white;
+    color: black;
+    float: left;
+    margin: 10px 0 0 10px;
+    height: 300px;
+    width: 32.5%;
+    border-radius: 10px;
+    text-align: left;
+    padding: 10px;
+}
+
+.service-item ul {
+    text-align: left;
+}
+
+@media all and (min-width:1800px) {
+    .home-page-img {
+        width: 450px;
+        height: 450px;
+        margin: 0 75px;
+    }
+}
+
+@media all and (max-width:1550px) {
+    .service-item-sub p {
+        font-size: 22px;
+    }
+
+    .service-item-sub {
+        width: 49%;
+    }
+}
+
+@media all and (max-width:1460px) {
+    .home-page-info p {
+        font-size: 25px;
+    }
+}
+
+@media all and (max-width:1250px) {
+    .home-page-img {
+        width: 250px;
+        height: 250px;
+        margin: 0 75px;
+    }
+}
+
+@media all and (max-width:1050px) {
+    .home-page-img {
+        width: 250px;
+        height: 250px;
+        margin: 0 25px;
+    }
+    .home-page-info{
+        margin: 10px 0;
+    }
+
+    .home-page-info-container {
+        width: 100%;
+        display:block;
     }
 }
